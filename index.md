@@ -7,4 +7,3 @@ County Alive is a ESX project to revamp the county and bring more players of you
 - Grilling
 - Hiking
 - Offroad Driving
--------------------
