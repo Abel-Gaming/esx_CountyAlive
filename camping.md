@@ -1,5 +1,4 @@
-# County Alive
-## Camping
+# Camping
 While camping, users will be able to set a tent, set a fire, set a chair, and set a grill! All items that are set are able to be moved by toggling edit mode in the camping menu!
 
 ## Camping Configuration Settings
@@ -19,3 +18,4 @@ Config.StartCampfireCommand = 'set-campfire'
 Config.PitchTentCommand = 'set-tent'
 Config.PlaceGrillCommand = 'set-grill'
 ```
+![Tent](https://thedopechronicles.files.wordpress.com/2013/12/0_0-124.jpg)
