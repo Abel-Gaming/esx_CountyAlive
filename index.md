@@ -3,7 +3,7 @@ County Alive is a ESX project to revamp the county and bring more players of you
 
 
 ### Things to do
-- Food trucks / trailers
+- [Food trucks / trailers](https://abel-gaming.github.io/esx_CountyAlive/food-trucks)
 - [Camping](https://abel-gaming.github.io/esx_CountyAlive/camping)
 - Grilling
 - Hiking
