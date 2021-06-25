@@ -1,6 +1,4 @@
 # esx_CountyAlive
-Only adding the configuration file here since this is a paid release. The config file was too large to only post a screenshot.
-
 County Alive aims to bring more activity to the county of your ESX server! With many activities to do, players will find more reasons to spend some time in the county! Below are a list of activities. I have also attached a link to the configuration file!
 
 ## Activities
