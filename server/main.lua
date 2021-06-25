@@ -1,4 +1,5 @@
 ESX = nil
+local users = {}
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
@@ -25,9 +26,14 @@ AddEventHandler('esx_CountyAlive:AddInventoryItem', function(item)
 end)
 
 RegisterServerEvent('esx_CountyAlive:AddMoney')
-AddEventHandler('esx_CountyAlive:AddMoney', function(amount)
+AddEventHandler('esx_CountyAlive:AddMoney', function()
 	local xPlayer = ESX.GetPlayerFromId(source)
-	xPlayer.addMoney(amount)
+	if users[source] then 
+		xPlayer.addMoney(Config.HikingRewardAmount)
+		users[source] = nil 
+	else
+		print(('esx_policejob: %s attempted to confiscate!'):format(xPlayer.identifier))
+	end
 end)
 
 RegisterServerEvent('esx_CountyAlive:RentVehicle')
@@ -44,6 +50,7 @@ end)
 RegisterServerEvent('esx_CountyAlive:GlobalAlert')
 AddEventHandler('esx_CountyAlive:GlobalAlert', function(text)
     local xPlayer = ESX.GetPlayerFromId(source)
+	users[source] = true 
 	TriggerClientEvent('esx_CountyAlive:ShowGlobalAlert', -1, text)
 end)
 

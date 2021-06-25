@@ -756,7 +756,7 @@ if Config.EnableHiking then
 					if isHiking then
 						if Config.EnableHikingReward then
 							if Config.HikingRewardMoney then
-								TriggerServerEvent('esx_CountyAlive:AddMoney', Config.HikingRewardAmount)
+								TriggerServerEvent('esx_CountyAlive:AddMoney')
 							else
 								TriggerServerEvent('esx_CountyAlive:AddInventoryItem', Config.HikingRewardItem)
 							end
