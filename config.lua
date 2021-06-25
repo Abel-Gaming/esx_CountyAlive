@@ -1,5 +1,8 @@
 Config = {}
 
+-- Debug --
+Config.EnableDebug = false
+
 -- Ground Marker Settings (Will apply everywhere that a marker is used)
 Config.MarkerType = 27 -- Type of marker
 Config.xScale = 1.0

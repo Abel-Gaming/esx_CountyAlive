@@ -1,0 +1,3 @@
+These are some configs that I have used in my server to also add some more things to do in the county.
+
+These are completely optional, and all credit goes to the authors who have made these scripts. These are only the config files!
