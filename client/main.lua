@@ -588,7 +588,7 @@ if Config.EnableFishing and Config.EnableFishingInventory then
 			Citizen.Wait(0)
 			if isFishing then
 				Citizen.Wait(Config.FishingCatchCooldown * 1000)
-				TriggerServerEvent('esx_CountyAlive:AddInventoryItem', Config.FishItem)
+				TriggerServerEvent('esx_CountyAlive:AddFishingReward')
 			end
 		end
 	end)
@@ -756,10 +756,8 @@ if Config.EnableHiking then
 					if isHiking then
 						if Config.EnableHikingReward then
 							if Config.HikingRewardMoney then
-								--TriggerServerEvent('esx_CountyAlive:AddMoney', Config.HikingRewardAmount) ** Use this if you want, some people decide not to in case of exploits **
 								TriggerServerEvent('esx_CountyAlive:AddHikingRewardMoney')
 							else
-								--TriggerServerEvent('esx_CountyAlive:AddInventoryItem', Config.HikingRewardItem) ** Use this if you want, some people decide not to in case of exploits **
 								TriggerServerEvent('esx_CountyAlive:AddHikingRewardItem')
 							end
 						end

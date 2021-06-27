@@ -14,20 +14,14 @@ AddEventHandler('esx_CountyAlive:PurchaseItem', function(item, price)
 	end
 end)
 
-RegisterServerEvent('esx_CountyAlive:AddInventoryItem')
-AddEventHandler('esx_CountyAlive:AddInventoryItem', function(item)
-    local xPlayer = ESX.GetPlayerFromId(source)
-    if xPlayer.canCarryItem(item, 1) then
-        xPlayer.addInventoryItem(item, 1)
+RegisterServerEvent('esx_CountyAlive:AddFishingReward')
+AddEventHandler('esx_CountyAlive:AddFishingReward', function()
+	local xPlayer = ESX.GetPlayerFromId(source)
+    if xPlayer.canCarryItem(Config.FishItem, 1) then
+        xPlayer.addInventoryItem(Config.FishItem, 1)
     else
         xPlayer.showNotification('~r~[ERROR]~w~ You cannot carry that item!')
     end
-end)
-
-RegisterServerEvent('esx_CountyAlive:AddMoney')
-AddEventHandler('esx_CountyAlive:AddMoney', function(amount)
-	local xPlayer = ESX.GetPlayerFromId(source)
-	xPlayer.addMoney(amount)
 end)
 
 RegisterServerEvent('esx_CountyAlive:RentVehicle')
