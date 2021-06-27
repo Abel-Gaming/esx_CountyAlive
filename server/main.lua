@@ -47,6 +47,22 @@ AddEventHandler('esx_CountyAlive:GlobalAlert', function(text)
 	TriggerClientEvent('esx_CountyAlive:ShowGlobalAlert', -1, text)
 end)
 
+RegisterServerEvent('esx_CountyAlive:AddHikingRewardMoney')
+AddEventHandler('esx_CountyAlive:AddHikingRewardMoney', function()
+	local xPlayer = ESX.GetPlayerFromId(source)
+	xPlayer.addMoney(Config.HikingRewardAmount)
+end)
+
+RegisterServerEvent('esx_CountyAlive:AddHikingRewardItem')
+AddEventHandler('esx_CountyAlive:AddHikingRewardItem', function()
+	local xPlayer = ESX.GetPlayerFromId(source)
+    if xPlayer.canCarryItem(Config.HikingRewardItem, 1) then
+        xPlayer.addInventoryItem(Config.HikingRewardItem, 1)
+    else
+        xPlayer.showNotification('~r~[ERROR]~w~ You cannot carry that item!')
+    end
+end)
+
 ESX.RegisterServerCallback('esx_CountyAlive:CheckPlayerBalance', function(source, cb, price)
     local xPlayer = ESX.GetPlayerFromId(source)
 	if price <= xPlayer.getMoney() then

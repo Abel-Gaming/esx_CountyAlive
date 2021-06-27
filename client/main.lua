@@ -756,9 +756,11 @@ if Config.EnableHiking then
 					if isHiking then
 						if Config.EnableHikingReward then
 							if Config.HikingRewardMoney then
-								TriggerServerEvent('esx_CountyAlive:AddMoney', Config.HikingRewardAmount)
+								--TriggerServerEvent('esx_CountyAlive:AddMoney', Config.HikingRewardAmount) ** Use this if you want, some people decide not to in case of exploits **
+								TriggerServerEvent('esx_CountyAlive:AddHikingRewardMoney')
 							else
-								TriggerServerEvent('esx_CountyAlive:AddInventoryItem', Config.HikingRewardItem)
+								--TriggerServerEvent('esx_CountyAlive:AddInventoryItem', Config.HikingRewardItem) ** Use this if you want, some people decide not to in case of exploits **
+								TriggerServerEvent('esx_CountyAlive:AddHikingRewardItem')
 							end
 						end
 						ESX.ShowNotification('Your hike has ended! Congratulations!')
