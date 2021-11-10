@@ -23,7 +23,7 @@ Config.PlaceGrillCommand = 'set-grill'
 - [x] Add the ability to move objects
 - [x] Add the ability to spawn a chair (to sit by the fire)
 - [ ] Add the ability to cook on the grill (using animation + adding food if enabled in the config)
-- [ ] Add the ability to lock objects in place (so moving others does not interfere)
+- [x] Add the ability to lock objects in place (so moving others does not interfere)
 
 ----
 
